@@ -1,0 +1,18 @@
+
+/*ESTRUTURA FOR loop DINAMICAMENTE */
+
+const nome = 'Tiago Freire Calori'
+
+for (let i = 0; i < nome.length; i++) {
+    //  console.log(i);
+      console.log(nome[i]);
+      
+  }
+
+  /* ou
+
+  for (let i = 0; i < nome.length; i++) {
+    const letra = nome[i];
+    console.log(letra);
+}
+*/
