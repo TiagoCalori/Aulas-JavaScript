@@ -15,15 +15,14 @@
 const { gets, print } = require('./funcoes_auxiliares_ex3');
 
 const salarioBruto = gets();
-const beneficios = gets();
-let desconto = 5
+const valorBeneficios = gets();
 
 function descontoAliquota(valor, porcentual) {
 
     return (valor * (porcentual / 100));
 }
 
-function pegarPercentualComBaseNoSalario(salario,) {
+function PegarAliquota(salario,) {
     if (salario >= 0 && salario <= 1100) {
         return 5;
     } else if (salario >= 1100.01 && salario <= 2500) {
@@ -33,9 +32,15 @@ function pegarPercentualComBaseNoSalario(salario,) {
     }
 }
 
+// refatoração do código com prof Ale
 
+const aliquotaImposto = PegarAliquota(salarioBruto,);
+const valorImposto = descontoAliquota(salarioBruto, aliquotaImposto);
+const valorATransferir = salarioBruto - valorImposto + valorBeneficios;
 
+print(valorATransferir);
 
+/*  meu codigo criado
 const valorATransferir = salarioBruto - (descontoAliquota(salarioBruto,pegarPercentualComBaseNoSalario(salarioBruto,))) + beneficios;
 
 print('Salário base ' + salarioBruto);
@@ -43,3 +48,4 @@ print('base aliquota ' + pegarPercentualComBaseNoSalario(salarioBruto)+ '%');
 print('valor do desconto ' + descontoAliquota(salarioBruto, 10));
 print('valor beneficios ' + beneficios);
 print ('Total a receber ' + valorATransferir);
+*/
