@@ -6,7 +6,7 @@
 const { gets, print } = require('./funcoes_auxiliares_ex1');
 
 const mediaNota = gets();
-let media = 0;
+
 
 if (mediaNota < 5) {
     print('reprovado');
